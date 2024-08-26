@@ -58,9 +58,9 @@ export function Footer() {
           <div className="flex max-w-96 flex-col gap-5 text-subtitle text-white/65">
             <p className="mx-auto w-full text-center sm:text-left lg:w-full">
               Audiophile is an all in one stop to fulfill your audio needs.
-              We're a small team of music lovers and sound specialists who are
-              devoted to helping you get the most out of personal audio. Come
-              and visit our demo facility - we’re open 7 days a week.
+              We&apos;re a small team of music lovers and sound specialists who
+              are devoted to helping you get the most out of personal audio.
+              Come and visit our demo facility - we&apos;re open 7 days a week.
             </p>
             <p className="w-full text-center sm:text-left">
               Copyright 2021. All Rights Reserved
