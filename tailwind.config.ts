@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import colors from "tailwindcss/colors";
 
 const config: Config = {
   content: [
@@ -20,6 +21,7 @@ const config: Config = {
         cloud: "#f1f1f1",
         almost: "#fafafa",
       },
+      red: colors.red[600],
       black: "#000000",
     },
     fontSize: {
