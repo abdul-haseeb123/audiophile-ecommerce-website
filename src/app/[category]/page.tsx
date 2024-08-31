@@ -16,6 +16,7 @@ export default async function CategoryPage({
   if (!["headphones", "speakers", "earphones"].includes(category)) {
     throw new Error("Invalid category");
   }
+
   const products = await getProductsByCategory(category);
   if (!products || products.length === 0) {
     throw new Error("No products found");

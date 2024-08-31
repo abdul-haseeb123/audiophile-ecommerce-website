@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import CldImage from "@/components/ui/cld-image";
 import { ProductsHighlight } from "@/components/products-highlight";
 import { BestGearCard } from "@/components/best-gear-card";
+import { AddToCartButton } from "@/components/add-to-cart-button";
 
 export default async function ProductPage({
   params,
@@ -62,18 +63,12 @@ export default async function ProductPage({
             <h1 className="text-3xl font-bold md:text-5xl">{product.name}</h1>
             <p className="text-base">{product.description}</p>
             <p className="text-xl">${product.price.toLocaleString()}</p>
-            <div className="flex gap-2">
-              <div className="mt-6 flex w-28 items-center justify-between bg-white-cloud px-4">
-                <button className="text-xl text-black/55 hover:text-black">
-                  +
-                </button>
-                <span className="font-bold">1</span>
-                <button className="text-xl text-black/55 hover:text-black">
-                  -
-                </button>
-              </div>
-              <Button className="mt-6 w-fit">Add to cart</Button>
-            </div>
+            <AddToCartButton
+              slug={product.slug}
+              name={product.name}
+              price={product.price}
+              productImage={product.productImage}
+            />
           </div>
         </div>
         <div className="mt-20 flex flex-col items-center gap-10 md:gap-28 lg:flex-row lg:items-start">

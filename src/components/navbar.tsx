@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { IconHamburger } from "@/icons";
 import { ProductHighlight } from "./product-highlight";
 import { useRef, useEffect, useState } from "react";
+import { Cart } from "./cart";
 
 type Props = {
   variant?: "primary" | "secondary";
@@ -53,9 +54,9 @@ export function Navbar({ variant = "primary" }: Props) {
             <button className="group pl-3 md:hidden" onClick={toggleMobileNav}>
               <IconHamburger className="stroke-2 group-hover:fill-beige-dark" />
             </button>
-            <h1 className="mx-auto text-2xl font-bold text-white sm:mx-0">
-              audiophile
-            </h1>
+            <Link href="/" className="mx-auto sm:mx-0">
+              <h1 className="text-2xl font-bold text-white">audiophile</h1>
+            </Link>
           </div>
 
           <ul className="hidden items-center gap-4 text-subtitle text-white md:flex">
@@ -77,9 +78,7 @@ export function Navbar({ variant = "primary" }: Props) {
               </li>
             ))}
           </ul>
-          <button className={"group"}>
-            <IconCart className="fill-white group-hover:fill-beige-dark" />
-          </button>
+          <Cart />
         </nav>
       </header>
       <ul

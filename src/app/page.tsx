@@ -30,7 +30,10 @@ export default function Home() {
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
             </p>
-            <Link href={"/headphones/xx99-mark-ii-headphones-q441d1vl9m"}>
+            <Link
+              href={"/headphones/xx99-mark-ii-headphones-q441d1vl9m"}
+              className="mx-auto lg:mx-0"
+            >
               <Button variant="primary" className="mx-auto w-fit lg:mx-0">
                 SEE PRODUCT
               </Button>
