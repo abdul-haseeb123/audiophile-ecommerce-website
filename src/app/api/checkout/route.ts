@@ -3,7 +3,6 @@ import Order from "@/models/order.model";
 import dbConnect from "@/lib/db";
 
 export async function POST(request: NextRequest) {
-  await new Promise((resolve) => setTimeout(resolve, 3000));
   await dbConnect();
   const data = await request.json();
   if (!data) {
